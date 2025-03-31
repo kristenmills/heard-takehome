@@ -7,8 +7,13 @@ import { TransactionForm } from './transaction-form';
 import type { Transaction } from './types';
 
 export function Transactions() {
-  const { fetchTransactions, transactions, updateTransaction, addTransaction } =
-    useTransactions();
+  const {
+    fetchTransactions,
+    transactions,
+    updateTransaction,
+    addTransaction,
+    removeTransaction,
+  } = useTransactions();
   const [modalOpen, setModalOpen] = useState(false);
   const [initialTransaction, setTransaction] = useState<Transaction>();
 
@@ -45,7 +50,11 @@ export function Transactions() {
       <Button variant="contained" color="primary" onClick={handleAddClick}>
         Add Transaction
       </Button>
-      <TransactionsList transactions={transactions} />
+      <TransactionsList
+        transactions={transactions}
+        onEditClick={handleEditClick}
+        onDeleteClick={removeTransaction}
+      />
 
       {modalOpen && (
         <TransactionForm
