@@ -1,38 +1,23 @@
-# Heard Take Home
+# Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
+This project was bootstrapped with Fastify-CLI.
 
-## Getting Started
+## Available Scripts
 
-## Requirements
-* NodeJS & NPM
-* Sqlite3
+In the project directory, you can run:
 
-## Installation
+### `npm run dev`
 
-To install both the frontend and backend dependencies, run the following command in the root directory:
-```
-npm install
+To start the app in dev mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```
+### `npm start`
 
-## Setting up sqlite & Prisma
+For production mode
 
-```
-npx -w api prisma migrate dev
-```
+### `npm run test`
 
-## Running the application
-To run the backend server, run the following command in the root directory:
-```
-npm -w api start
-```
+Run the test cases.
 
-The API server will be running on `http://localhost:3000`
+## Learn More
 
-To run the frontend server, run the following command in the root directory:
-```
-npm -w frontend run dev
-```
-
-The frontend server will be running on `http://localhost:5173
-
-
+To learn Fastify, check out the [Fastify documentation](https://fastify.dev/docs/latest/).
