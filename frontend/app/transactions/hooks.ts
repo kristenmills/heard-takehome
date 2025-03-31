@@ -88,6 +88,9 @@ export function useTransactions() {
       const res = await fetch('http://localhost:3000/transactions', {
         method: 'POST',
         body: JSON.stringify(transaction),
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
 
       if (!res.ok) {
@@ -133,6 +136,9 @@ export function useTransactions() {
         {
           method: 'PUT',
           body: JSON.stringify(transaction),
+          headers: {
+            'Content-Type': 'application/json',
+          },
         },
       );
       if (!res.ok) {

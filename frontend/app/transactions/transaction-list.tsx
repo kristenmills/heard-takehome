@@ -5,16 +5,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { useEffect } from 'react';
-import { useTransactions } from './hooks';
+import type { Transaction } from './types';
 
-export function TransactionsList() {
-  const { fetchTransactions, transactions } = useTransactions();
+interface TransactionListProps {
+  transactions: Transaction[];
+}
 
-  useEffect(() => {
-    fetchTransactions();
-  }, []);
-
+export function TransactionsList({ transactions }: TransactionListProps) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
